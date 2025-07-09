@@ -117,4 +117,11 @@ app.get('/notifications', (req, res) => {
 
 });
 
-module.exports = app;
+// INICIA O SERVIDOR!
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Servidor rodando na porta ${PORT}`);
+});
+
+// Se for usar para testes, pode manter o export
+// module.exports = app;
