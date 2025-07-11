@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home - Integração Mercado Livre</title>
+  <link rel="stylesheet" href="/public/styles.css">
+</head>
+<body>
+  <h1>Bem-vindo, <%= user.nickname %>!</h1>
+  <p>ID do usuário: <%= user.id %></p>
+  <h2>Tipos de anúncio disponíveis</h2>
+  <ul>
+    <% listing_types.forEach(function(tipo) { %>
+      <li><%= tipo.name %></li>
+    <% }) %>
+  </ul>
+  <h2>Moedas disponíveis</h2>
+  <ul>
+    <% currencies.forEach(function(moeda) { %>
+      <li><%= moeda.description %> (<%= moeda.id %>)</li>
+    <% }) %>
+  </ul>
+</body>
+</html>
